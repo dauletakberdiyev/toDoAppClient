@@ -1,19 +1,19 @@
 <template>
   <div class="app">
-    <ColumnsList :columns = "columns"/>
+    <ColumnsList/>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
 import ColumnsList from './components/Columns.vue'
-import Columns from './types/Columns'
+import Status from './types/Status'
 
 export default defineComponent({
   name: 'App',
   components: { ColumnsList },
   setup() {
-    const columns = ref<Columns[]>([
+    const statuses = ref<Status[]>([
       { id: 1, title: "Open" },
       { id: 2, title: "In progress" },
       { id: 3, title: "In review" },
@@ -21,7 +21,7 @@ export default defineComponent({
       { id: 5, title: "Done" },
     ])
 
-    return { columns }
+    return { statuses }
   },
   data() {
     return {
@@ -35,4 +35,4 @@ export default defineComponent({
     }
   }
 })
-</script>
+</script>./types/Status
